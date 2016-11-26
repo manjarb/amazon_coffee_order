@@ -1,25 +1,39 @@
 import React, { Component } from 'react';
-import ParagonLogo from '../../images/paragon_logo.png';
 
 class Shopbox extends Component {
+
+    returnLabelClass(person){
+        if(person > 8){
+            return "danger";
+        } else
+        if(person > 5){
+            return "warning";
+        } else {
+            return "primary";
+        }
+    }
+
     render() {
+
+        const shop = this.props.shop;
+
         return (
             <div className="box">
                 <article className="media">
                     <div className="media-left">
                         <figure className="image is-64x64">
-                            <img src={ParagonLogo} alt="Siam paragon"/>
+                            <img src={shop.thumbnail} alt="Siam paragon"/>
                         </figure>
                         <h2 className="text-center">
-                            <strong>0.5 KM</strong>
+                            <strong>{shop.distance} KM</strong>
                         </h2>
                     </div>
                     <div className="media-content">
                         <div className="content">
                             <p>
-                                <strong>Amazon Cafe</strong> <small>location</small> <strong>Siam Paragon</strong>
+                                <strong>{shop.name}</strong> <small>location</small> <strong>{shop.location}</strong>
                                 <br/>
-                                <span className="margin-top-15 button is-primary is-outlined queue-number-layout">จำนวนคิวก่อนหน้า <strong>&nbsp;12&nbsp;</strong> คิว</span>
+                                <span className={`margin-top-15 button is-${this.returnLabelClass(shop.waiting_number)} is-outlined queue-number-layout`}>จำนวนคิวก่อนหน้า <strong>&nbsp;{shop.waiting_number}&nbsp;</strong> คิว</span>
                             </p>
                         </div>
                     </div>

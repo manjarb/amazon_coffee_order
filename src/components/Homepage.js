@@ -11,23 +11,17 @@ class Homepage extends Component {
   }
 
   render() {
-      return (
-          <div>
-            <Searchbox/>
-            <Link to="/shops/1">
-                <Shopbox />
-            </Link>
-            <Link to="/shops/1">
-              <Shopbox />
-            </Link>
-            <Link to="/shops/1">
-              <Shopbox />
-            </Link>
-            <Link to="/shops/1">
-              <Shopbox />
-            </Link>
-          </div>
-      );
+
+    const shops = this.props.shops;
+
+    return (
+        <div>
+          <Searchbox/>
+          {
+            shops.map((shop,index) => <Link to={`/shops/${shop.id}`} key={index}><Shopbox shop={shop} /></Link>)
+          }
+        </div>
+    );
   }
 }
 
