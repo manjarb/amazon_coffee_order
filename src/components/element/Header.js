@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 class Header extends Component {
 
     enableBack(path){
-        if(path === "/"){
+        if(path === "/" || path === "/user/orders"){
           return false;
         } else {
           return true;

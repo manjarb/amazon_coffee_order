@@ -14,7 +14,7 @@ class Footer extends Component {
                         </Link>
                     </div>
                     <div className="column">
-                        <Link to="/">
+                        <Link to="/user/orders">
                             <i className="fa fa-shopping-cart" />
                             <br/>
                             Your Orders

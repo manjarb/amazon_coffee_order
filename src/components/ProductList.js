@@ -53,7 +53,6 @@ class ProductList extends Component {
   }
 
   confirmOrder(){
-    console.log('confirmOrder');
     this.setState({confirmOrderModalOpen: false});
     this.context.router.push(`/order/1/success`);
   }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import CoffeeImage from '../images/espresso.jpg';
+import ConfirmOrderModal from './element/modal/ConfirmOrderModal';
 
 class OrderDetails extends Component {
 
@@ -59,7 +60,7 @@ class OrderDetails extends Component {
           </div>
           <div className="columns is-mobile">
             <div className="column">
-              <Link to="shops/1/product/1/customize">
+              <Link to="/shops/1/product/1/customize">
                 <p className="link">
                   Customize your Coffee
                 </p>
@@ -154,11 +155,20 @@ class OrderDetails extends Component {
         </div>
         <div className="extra-request-box">
           <h3>
-            Extra Request
+            <strong>Extra Request</strong>
           </h3>
           <p className="control">
             <textarea className="textarea" placeholder="Ex. Plastic bags please"/>
           </p>
+        </div>
+        <div className="product-details-total-price-box">
+          <p><strong>TOTAL:&nbsp; 480 Baht</strong></p>
+        </div>
+        <div className="button-submit-product-details-box">
+          <Link to="/user/orders">
+            <button className="button is-success">Buy Now</button>
+          </Link>
+          <button className="button is-info">Add to your Orders</button>
         </div>
       </div>
     );
