@@ -26,8 +26,8 @@
       <file leaf-file-name="ConfirmOrderModal.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/element/modal/ConfirmOrderModal.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state relative-caret-position="352">
+              <caret line="34" column="27" selection-start-line="33" selection-start-column="16" selection-end-line="43" selection-end-column="22" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -92,19 +92,32 @@
       <file leaf-file-name="OrderDetails.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/OrderDetails.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="232">
+              <caret line="183" column="16" selection-start-line="183" selection-start-column="16" selection-end-line="183" selection-end-column="16" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
                 <element signature="e#1553#3000#0" expanded="false" />
                 <element signature="e#3011#4455#0" expanded="false" />
-                <element signature="e#4466#5915#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddOrdersSuccessModal.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="YourOrders.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/YourOrders.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="84" column="44" selection-start-line="84" selection-start-column="44" selection-end-line="84" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#798#1594#0" expanded="false" />
+                <element signature="e#1607#2401#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddOrdersSuccessModal.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/element/modal/AddOrdersSuccessModal.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="264">
@@ -131,7 +144,6 @@
         <option value="$PROJECT_DIR$/src/components/Homepage.js" />
         <option value="$PROJECT_DIR$/src/components/element/modal/OrderModal.js" />
         <option value="$PROJECT_DIR$/src/components/element/modal/OtpModal.js" />
-        <option value="$PROJECT_DIR$/src/components/element/modal/ConfirmOrderModal.js" />
         <option value="$PROJECT_DIR$/src/css/_productList.styl" />
         <option value="$PROJECT_DIR$/src/components/element/OrderDetails.js" />
         <option value="$PROJECT_DIR$/src/components/SuccessOrder.js" />
@@ -141,11 +153,12 @@
         <option value="$PROJECT_DIR$/src/components/CustomizeOrder.js" />
         <option value="$PROJECT_DIR$/src/css/_element.styl" />
         <option value="$PROJECT_DIR$/src/css/_product_details.styl" />
-        <option value="$PROJECT_DIR$/src/components/YourOrders.js" />
         <option value="$PROJECT_DIR$/src/components/ProductList.js" />
         <option value="$PROJECT_DIR$/src/components/box/Drinkbox.js" />
-        <option value="$PROJECT_DIR$/src/components/OrderDetails.js" />
         <option value="$PROJECT_DIR$/src/components/element/modal/AddOrdersSuccessModal.js" />
+        <option value="$PROJECT_DIR$/src/components/element/modal/ConfirmOrderModal.js" />
+        <option value="$PROJECT_DIR$/src/components/OrderDetails.js" />
+        <option value="$PROJECT_DIR$/src/components/YourOrders.js" />
       </list>
     </option>
   </component>
@@ -441,12 +454,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1480135007844</updated>
-      <workItem from="1480135009052" duration="35989000" />
+      <workItem from="1480135009052" duration="37309000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35989000" />
+    <option name="totallyTimeSpent" value="37309000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1440" height="827" extended-state="6" />
@@ -664,18 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/YourOrders.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-194">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#798#1594#0" expanded="false" />
-            <element signature="e#1607#2401#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="422">
@@ -702,29 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/element/modal/ConfirmOrderModal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/OrderDetails.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#1553#3000#0" expanded="false" />
-            <element signature="e#3011#4455#0" expanded="false" />
-            <element signature="e#4466#5915#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ProductList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="628">
@@ -741,6 +719,48 @@
           <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/element/modal/PaymentModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/element/modal/ConfirmOrderModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="34" column="27" selection-start-line="33" selection-start-column="16" selection-end-line="43" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/OrderDetails.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="183" column="16" selection-start-line="183" selection-start-column="16" selection-end-line="183" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#1553#3000#0" expanded="false" />
+            <element signature="e#3011#4455#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/YourOrders.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="84" column="44" selection-start-line="84" selection-start-column="44" selection-end-line="84" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#798#1594#0" expanded="false" />
+            <element signature="e#1607#2401#0" expanded="false" />
           </folding>
         </state>
       </provider>

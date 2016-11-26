@@ -80,6 +80,18 @@ class YourOrders extends Component {
             </div>
           </div>
           <br/>
+          <div className="payment-model-box text-right">
+            <label className="label">Payment Method</label>
+            <p className="control text-right">
+              <span className="select">
+                <select>
+                  <option>Cash</option>
+                  <option>Credit Card</option>
+                </select>
+              </span>
+            </p>
+          </div>
+          <br/>
           <div className="button-submit-your-orders-box">
             <Link to="/order/1/success">
               <button className="button is-success is-large">

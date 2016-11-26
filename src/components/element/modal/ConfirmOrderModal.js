@@ -30,6 +30,18 @@ class ConfirmOrderModal extends Component {
                     <li><a href="#">- Extra Shot</a></li>
                   </ul>
                 </div>
+                <br/>
+                <div className="payment-model-box">
+                  <label className="label">Payment Method</label>
+                  <p className="control text-center">
+                    <span className="select">
+                      <select>
+                        <option>Cash</option>
+                        <option>Credit Card</option>
+                      </select>
+                    </span>
+                  </p>
+                </div>
               </div>
             </div>
             <div className="card-footer">
