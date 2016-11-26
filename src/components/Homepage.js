@@ -6,7 +6,8 @@ import Searchbox from './element/Searchbox';
 class Homepage extends Component {
 
   componentDidMount(){
-    this.props.updatePreviousPath(this.props.location.pathname);
+    this.props.updatePreviousPath("/");
+    this.props.updateHeaderName("CHOOSE STORE");
   }
 
   render() {

@@ -12,18 +12,20 @@ class Header extends Component {
     }
 
     render() {
-        return (
-            <header className="text-center">
-                { this.enableBack(this.props.currentPath) &&
-                  <Link to={this.props.previousPath}>
-                    <div className="back-menu-bt">
-                      <i className="fa fa-angle-left" />
-                    </div>
-                  </Link>
-                }
-              <h1><strong>SHOPS</strong></h1>
-            </header>
-        );
+      const headerName = this.props.headerName || "AMAZON";
+
+      return (
+          <header className="text-center">
+              { this.enableBack(this.props.currentPath) &&
+                <Link to={this.props.previousPath}>
+                  <div className="back-menu-bt">
+                    <i className="fa fa-angle-left" />
+                  </div>
+                </Link>
+              }
+            <h1><strong>{headerName}</strong></h1>
+          </header>
+      );
     }
 }
 
