@@ -8,6 +8,94 @@ class App extends Component {
     super();
     this.updatePreviousPath = this.updatePreviousPath.bind(this);
     this.updateHeaderName = this.updateHeaderName.bind(this);
+
+    const drinks = [
+                    {
+                      "id": 1,
+                      "name": "Americano",
+                      "coffee_image": "http://www.medicalnewstoday.com/content/images/articles/311/311569/coffee.jpg",
+                      "hot": {
+                        "price": 50
+                      },
+                      "cold": {
+                        "price": 60
+                      },
+                      "frappe": {
+                        "price": 70
+                      }
+                    },
+                    {
+                      "id": 2,
+                      "name": "Cappuccino",
+                      "coffee_image": "http://cms.kalbhi.com/admin/data/blog_img/3167451501594b973_download.jpg",
+                      "hot": {
+                        "price": 60
+                      },
+                      "cold": {
+                        "price": 70
+                      },
+                      "frappe": {
+                        "price": 80
+                      }
+                    },
+                    {
+                      "id": 3,
+                      "name": "Espresso",
+                      "coffee_image": "http://www.goodmorningcoffee.com/images/CoffeeCup.png",
+                      "hot": {
+                        "price": 50
+                      },
+                      "cold": {
+                        "price": 60
+                      },
+                      "frappe": {
+                        "price": 70
+                      }
+                    },
+                    {
+                      "id": 4,
+                      "name": "Turkish coffee",
+                      "coffee_image": "http://sawadacoffee.com/wp-content/uploads/Sawada-Coffee-10DEC2015-004.jpg",
+                      "hot": {
+                        "price": 70
+                      },
+                      "cold": {
+                        "price": 80
+                      },
+                      "frappe": {
+                        "price": 90
+                      }
+                    },
+                    {
+                      "id": 5,
+                      "name": "Vienna coffee",
+                      "coffee_image": "https://www.coffee.net/media/blog/1463491933716765929.jpg",
+                      "hot": {
+                        "price": 100
+                      },
+                      "cold": {
+                        "price": 110
+                      },
+                      "frappe": {
+                        "price": 120
+                      }
+                    },
+                    {
+                      "id": 6,
+                      "name": "Kopi Luwak",
+                      "coffee_image": "http://www.contrastleiden.nl/wp-content/uploads/2015/04/coffee_art1.jpg",
+                      "hot": {
+                        "price": 50
+                      },
+                      "cold": {
+                        "price": 60
+                      },
+                      "frappe": {
+                        "price": 70
+                      }
+                    }
+                  ];
+
     this.state = {
       previousPath: "/",
       headerName: "AMAZON",
@@ -18,7 +106,8 @@ class App extends Component {
           "distance": 0.1,
           "location": "Machias",
           "name": "Bostonic",
-          "waiting_number": 9
+          "waiting_number": 9,
+          "drinks": drinks
         },
         {
           "id": 9,
@@ -26,7 +115,8 @@ class App extends Component {
           "distance": 0.2,
           "location": "Muir",
           "name": "Artworlds",
-          "waiting_number": 6
+          "waiting_number": 6,
+          "drinks": drinks
         },
         {
           "id": 7,
@@ -34,7 +124,8 @@ class App extends Component {
           "distance": 0.3,
           "location": "Cresaptown",
           "name": "Zentry",
-          "waiting_number": 5
+          "waiting_number": 5,
+          "drinks": drinks
         },
         {
           "id": 3,
@@ -42,7 +133,8 @@ class App extends Component {
           "distance": 0.4,
           "location": "Hobucken",
           "name": "Senmao",
-          "waiting_number": 9
+          "waiting_number": 9,
+          "drinks": drinks
         },
         {
           "id": 2,
@@ -50,7 +142,8 @@ class App extends Component {
           "distance": 0.5,
           "location": "Sedley",
           "name": "Springbee",
-          "waiting_number": 6
+          "waiting_number": 6,
+          "drinks": drinks
         }
       ]
     }

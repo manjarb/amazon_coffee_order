@@ -18,6 +18,7 @@ class ProductList extends Component {
     this.confirmOtp = this.confirmOtp.bind(this);
     this.closeConfirmOrderModal = this.closeConfirmOrderModal.bind(this);
     this.confirmOrder = this.confirmOrder.bind(this);
+    this.drinks = [];
     this.state = {
       orderModalOpen: false,
       otpModalOpen: false,
@@ -73,19 +74,22 @@ class ProductList extends Component {
   componentDidMount(){
     this.props.updatePreviousPath("/");
     this.props.updateHeaderName("PRODUCTS");
+    this.drinks = (this.props.shops.filter(x => x.id === parseInt(this.props.params.id)).map(x=> x.drinks))[0];
   }
 
   render() {
 
+    const drinks = this.drinks;
+
     return (
         <div>
           <Searchbox/>
+          {
+            drinks.map((drink,index) => <Drinkbox key={index}
+                                                  drink={drink}
+                                                  openOrderModal={this.openOrderModal} />)
+          }
 
-          <Drinkbox openOrderModal={this.openOrderModal} />
-
-          <Drinkbox openOrderModal={this.openOrderModal} />
-          <Drinkbox openOrderModal={this.openOrderModal} />
-          <Drinkbox openOrderModal={this.openOrderModal} />
           {this.state.orderModalOpen && <OrderModal closeModal={this.closeOrderModal}
                                                     placeOrder={this.placeOrder}
                                                     moreDetailsOrder={this.detailsOrder}/>}

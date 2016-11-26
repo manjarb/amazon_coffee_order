@@ -19,17 +19,14 @@ class Drinkbox extends Component {
         <article className="media">
           <div className="media-left">
             <figure className="image is-64x64">
-              <img src={CoffeeImage} alt="Siam paragon"/>
+              <img src={this.props.drink.coffee_image} alt={this.props.drink.name}/>
             </figure>
-            <h2 className="text-center">
-              <strong>0.5 KM</strong>
-            </h2>
           </div>
           <div className="media-content">
             <div className="content">
               <Link to="/shops/1/product/1">
                 <h3>
-                  <strong>Expresso</strong>
+                  <strong>{this.props.drink.name}</strong>
                 </h3>
               </Link>
               <div className="drink-order-menu-label">
@@ -37,19 +34,19 @@ class Drinkbox extends Component {
                   <div className="column">
                     <button href="#" onClick={this.openModal}>
                       <h4 className="blue-text">Cold</h4>
-                      <p className="button is-info">50</p>
+                      <p className="button is-info">{this.props.drink.cold.price}</p>
                     </button>
                   </div>
                   <div className="column">
                     <button href="#" onClick={this.openModal}>
                       <h4 className="red-text">Hot</h4>
-                      <p className="button is-danger">60</p>
+                      <p className="button is-danger">{this.props.drink.hot.price}</p>
                     </button>
                   </div>
                   <div className="column">
                     <button href="#" onClick={this.openModal}>
                       <h4 className="green-text">Frappe</h4>
-                      <p className="button is-success">70</p>
+                      <p className="button is-success">{this.props.drink.frappe.price}</p>
                     </button>
                   </div>
                   <div className="column">
