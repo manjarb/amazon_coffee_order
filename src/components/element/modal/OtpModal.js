@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
-class OrderModal extends Component {
+class OtpModal extends Component {
 
   render() {
     return (
@@ -11,19 +11,17 @@ class OrderModal extends Component {
           <div className="card is-fullwidth">
             <div className="card-header">
               <p className="card-header-title">
-                Component
+                Confirm Account
               </p>
             </div>
             <div className="card-content">
               <div className="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-                <br/>
-                  <small>11:09 PM - 1 Jan 2016</small>
+                <h2>กรุณาใส่เบอร์โทรศัพท์</h2>
               </div>
             </div>
             <div className="card-footer">
               <a className="card-footer-item" onClick={this.props.closeModal}>Cancel</a>
-              <a className="card-footer-item" onClick={this.props.placeOrder}>Order more</a>
+              <a className="card-footer-item">Confirm</a>
             </div>
           </div>
         </div>
@@ -32,4 +30,4 @@ class OrderModal extends Component {
   }
 }
 
-export default OrderModal;
+export default OtpModal;

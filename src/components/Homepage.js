@@ -5,14 +5,9 @@ import Searchbox from './element/Searchbox';
 
 class Homepage extends Component {
 
-  constructor(){
-    super();
-  }
-
   componentDidMount(){
     this.props.updatePreviousPath(this.props.location.pathname);
   }
-
 
   render() {
       return (

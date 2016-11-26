@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import App from './components/App';
 import Homepage from './components/Homepage';
 import ProductList from './components/ProductList';
