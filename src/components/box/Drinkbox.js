@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CoffeeImage from '../../images/espresso.jpg';
+import { Link } from 'react-router';
 
 class Drinkbox extends Component {
 
@@ -26,28 +27,30 @@ class Drinkbox extends Component {
           </div>
           <div className="media-content">
             <div className="content">
-              <h3>
-                <strong>Expresso</strong>
-              </h3>
+              <Link to="/shops/1/product/1">
+                <h3>
+                  <strong>Expresso</strong>
+                </h3>
+              </Link>
               <div className="drink-order-menu-label">
                 <div className="columns is-mobile text-center">
                   <div className="column">
-                    <a href="#" onClick={this.openModal}>
+                    <button href="#" onClick={this.openModal}>
                       <h4 className="blue-text">Cold</h4>
-                      <button className="button is-info">50</button>
-                    </a>
+                      <p className="button is-info">50</p>
+                    </button>
                   </div>
                   <div className="column">
-                    <a href="#" onClick={this.openModal}>
+                    <button href="#" onClick={this.openModal}>
                       <h4 className="red-text">Hot</h4>
-                      <button className="button is-danger">60</button>
-                    </a>
+                      <p className="button is-danger">60</p>
+                    </button>
                   </div>
                   <div className="column">
-                    <a href="#" onClick={this.openModal}>
+                    <button href="#" onClick={this.openModal}>
                       <h4 className="green-text">Frappe</h4>
-                      <button className="button is-success">70</button>
-                    </a>
+                      <p className="button is-success">70</p>
+                    </button>
                   </div>
                   <div className="column">
                   </div>

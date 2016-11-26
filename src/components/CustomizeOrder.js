@@ -58,7 +58,10 @@ class CustomizeOrder extends Component {
             <div className="columns is-mobile">
               <div className="column">
                 <p>
-                  <strong>- Extra Shots</strong>
+                  <strong>
+                    - Extra Shots <br/>
+                    (20 Baht per a shot)
+                  </strong>
                 </p>
               </div>
               <div className="column">
@@ -104,7 +107,10 @@ class CustomizeOrder extends Component {
             <div className="columns is-mobile">
               <div className="column">
                 <p>
-                  <strong>- Extra Shots</strong>
+                  <strong>
+                    - Extra Shots <br/>
+                    (20 Baht per a shot)
+                  </strong>
                 </p>
               </div>
               <div className="column">
@@ -150,7 +156,10 @@ class CustomizeOrder extends Component {
             <div className="columns is-mobile">
               <div className="column">
                 <p>
-                  <strong>- Extra Shots</strong>
+                  <strong>
+                    - Extra Shots <br/>
+                    (20 Baht per a shot)
+                  </strong>
                 </p>
               </div>
               <div className="column">
@@ -196,7 +205,10 @@ class CustomizeOrder extends Component {
             <div className="columns is-mobile">
               <div className="column">
                 <p>
-                  <strong>- Extra Shots</strong>
+                  <strong>
+                    - Extra Shots <br/>
+                    (20 Baht per a shot)
+                  </strong>
                 </p>
               </div>
               <div className="column">
