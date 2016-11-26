@@ -9,14 +9,26 @@ class OrderDetails extends Component {
     super();
     this.addOrder = this.addOrder.bind(this);
     this.closeAddOrderModal = this.closeAddOrderModal.bind(this);
+    this.deleteColdAmount = this.deleteColdAmount.bind(this);
+    this.addColdAmount = this.addColdAmount.bind(this);
+    this.deleteHotAmount = this.deleteHotAmount.bind(this);
+    this.addHotAmount = this.addHotAmount.bind(this);
     this.state = {
-      openAddOrderSuccessModal: false
-    }
+      openAddOrderSuccessModal: false,
+      cold_amount: 4,
+      hot_amount: 0
+    };
+  }
+
+  componentWillMount(){
+    this.drinks = (this.props.shops.filter(x => x.id === parseInt(this.props.params.shop_id, 10)).map(x=> x.drinks))[0];
+    this.drink = (this.drinks.filter(x => x.id === parseInt(this.props.params.order_id, 10)))[0];
   }
 
   componentDidMount(){
     this.props.updatePreviousPath("/shops/1");
     this.props.updateHeaderName("DETAILS");
+
   }
 
   addOrder(){
@@ -27,6 +39,26 @@ class OrderDetails extends Component {
     this.setState({openAddOrderSuccessModal: false});
   }
 
+  deleteColdAmount(){
+    if(this.state.cold_amount > 0){
+      this.setState({cold_amount: this.state.cold_amount - 1});
+    }
+  }
+
+  addColdAmount(){
+    this.setState({cold_amount: this.state.cold_amount + 1});
+  }
+
+  deleteHotAmount(){
+    if(this.state.hot_amount > 0){
+      this.setState({hot_amount: this.state.hot_amount - 1});
+    }
+  }
+
+  addHotAmount(){
+    this.setState({hot_amount: this.state.hot_amount + 1});
+  }
+
   render() {
     return (
       <div>
@@ -35,13 +67,13 @@ class OrderDetails extends Component {
             <article className="media">
               <div className="media-left">
                 <figure className="image is-64x64">
-                  <img src={CoffeeImage} alt="Espresso"/>
+                  <img src={this.drink.coffee_image} alt={this.drink.name}/>
                 </figure>
               </div>
               <div className="media-content">
                 <div className="content">
                   <h3>
-                    <strong>Espresso</strong>
+                    <strong>{this.drink.name}</strong>
                   </h3>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -62,13 +94,15 @@ class OrderDetails extends Component {
                 <div className="modal-order-amount-box text-center">
                   <div className="columns is-mobile">
                     <div className="column">
-                      <button type="button" className="button is-danger">
+                      <button type="button" onClick={this.deleteColdAmount} className="button is-danger">
                         -
                       </button>
                     </div>
-                    <div className="column">1</div>
                     <div className="column">
-                      <button type="button" className="button is-success">
+                      {this.state.cold_amount}
+                    </div>
+                    <div className="column">
+                      <button type="button" onClick={this.addColdAmount} className="button is-success">
                         +
                       </button>
                     </div>
@@ -102,13 +136,15 @@ class OrderDetails extends Component {
                 <div className="modal-order-amount-box text-center">
                   <div className="columns is-mobile">
                     <div className="column">
-                      <button type="button" className="button is-danger">
+                      <button type="button" onClick={this.deleteHotAmount} className="button is-danger">
                         -
                       </button>
                     </div>
-                    <div className="column">1</div>
                     <div className="column">
-                      <button type="button" className="button is-success">
+                      {this.state.hot_amount}
+                    </div>
+                    <div className="column">
+                      <button type="button" onClick={this.addHotAmount} className="button is-success">
                         +
                       </button>
                     </div>
@@ -131,6 +167,7 @@ class OrderDetails extends Component {
               </div>
             </div>
           </div>
+{/*
           <div className="product-order-details-box">
             <div className="columns is-mobile">
               <div className="column">
@@ -171,6 +208,7 @@ class OrderDetails extends Component {
               </div>
             </div>
           </div>
+*/}
           <div className="extra-request-box">
             <h3>
               <strong>Extra Request</strong>

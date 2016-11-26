@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 
 class ConfirmOrderModal extends Component {
 
@@ -17,11 +16,11 @@ class ConfirmOrderModal extends Component {
             <div className="card-content">
               <div className="content text-center">
                 <h2>
-                  <strong>Cold Expresso</strong>
+                  <strong>{this.props.order.name} {this.props.order.status}</strong>
                 </h2>
                 <div className="modal-order-amount-box">
                   <div className="columns is-mobile">
-                    <div className="column">1 Cup</div>
+                    <div className="column">{this.props.order.amount} Cup{this.props.order.amount > 1 ? "s" : "" }</div>
                   </div>
                 </div>
                 <div className="confirm-order-extra-list-box">

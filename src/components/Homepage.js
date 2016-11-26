@@ -16,7 +16,7 @@ class Homepage extends Component {
 
     return (
         <div>
-          <Searchbox/>
+          <Searchbox placeholder="Location"/>
           {
             shops.map((shop,index) => <Link to={`/shops/${shop.id}`} key={index}><Shopbox shop={shop} /></Link>)
           }

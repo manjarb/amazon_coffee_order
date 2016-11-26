@@ -8,6 +8,7 @@ class App extends Component {
     super();
     this.updatePreviousPath = this.updatePreviousPath.bind(this);
     this.updateHeaderName = this.updateHeaderName.bind(this);
+    this.addOrder = this.addOrder.bind(this);
 
     const drinks = [
                     {
@@ -145,6 +146,16 @@ class App extends Component {
           "waiting_number": 6,
           "drinks": drinks
         }
+      ],
+      order: [
+        /*{
+          id: 1,
+          name: "",
+          amount: "",
+          sugar_level: "",
+          shot_number: "",
+          type: ""
+        }*/
       ]
     }
   }
@@ -157,6 +168,14 @@ class App extends Component {
     this.setState({headerName: name})
   }
 
+  addOrder(order,amount,status){
+    let order_old = [];
+    order['amount'] = amount;
+    order['status'] = status;
+    order_old.push(order);
+    this.setState({order: order_old})
+  }
+
   render() {
     return (
       <div className="App">
@@ -167,7 +186,9 @@ class App extends Component {
               {React.cloneElement(this.props.children, {
                 updatePreviousPath: this.updatePreviousPath,
                 updateHeaderName: this.updateHeaderName,
-                shops: this.state.shop
+                shops: this.state.shop,
+                addOrder: this.addOrder,
+                order: this.state.order
               })}
             </div>
           <Footer />

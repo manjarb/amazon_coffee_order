@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 
 class SuccessOrder extends Component {
+
+  constructor(){
+    super();
+    this.state = {code: ""}
+  }
 
   componentDidMount(){
     this.props.updatePreviousPath("/shops/1");
     this.props.updateHeaderName("SUCCESS ORDER");
+    this.setState({code: Math.floor(Math.random() * 9999) + 1000});
+    this.location = (this.props.shops.filter(x => x.id === parseInt(this.props.params.id, 10)).map(x=> x.location))[0];
+
   }
 
   render() {
@@ -20,11 +27,11 @@ class SuccessOrder extends Component {
             When your drinks is making.
           </p>
           <h2>
-            <strong>1150</strong>
+            <strong>{this.state.code}</strong>
           </h2>
           <p>Please share this code to the staff.</p>
           <h3>
-            Location: <strong>Siam Paragon</strong>
+            Location: <strong>{this.location}</strong>
           </h3>
           <h4>
             Enjoy Your Drinks!

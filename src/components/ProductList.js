@@ -4,7 +4,6 @@ import Searchbox from './element/Searchbox';
 import OrderModal from './element/modal/OrderModal';
 import OtpModal from './element/modal/OtpModal';
 import ConfirmOrderModal from './element/modal/ConfirmOrderModal';
-import { browserHistory, Link } from 'react-router'
 
 class ProductList extends Component {
 
@@ -22,21 +21,28 @@ class ProductList extends Component {
     this.state = {
       orderModalOpen: false,
       otpModalOpen: false,
-      confirmOrderModalOpen: false
+      confirmOrderModalOpen: false,
+      drink: {},
+      status: ""
     }
   }
 
-  openOrderModal(){
-    this.setState({orderModalOpen: true});
+  openOrderModal(drink,status){
+    this.setState({
+      orderModalOpen: true,
+      drink: drink,
+      status: status
+    });
   }
 
   closeOrderModal(){
     this.setState({orderModalOpen: false});
   }
 
-  placeOrder(){
+  placeOrder(drink,amount,status){
     this.setState({orderModalOpen: false});
     this.setState({otpModalOpen: true});
+    this.props.addOrder(drink,amount,status);
   }
 
   closeOtpModal(){
@@ -74,7 +80,8 @@ class ProductList extends Component {
   componentDidMount(){
     this.props.updatePreviousPath("/");
     this.props.updateHeaderName("PRODUCTS");
-    this.drinks = (this.props.shops.filter(x => x.id === parseInt(this.props.params.id)).map(x=> x.drinks))[0];
+
+    this.drinks = (this.props.shops.filter(x => x.id === parseInt(this.props.params.id, 10)).map(x=> x.drinks))[0];
   }
 
   render() {
@@ -83,20 +90,24 @@ class ProductList extends Component {
 
     return (
         <div>
-          <Searchbox/>
+          <Searchbox placeholder="menu"/>
           {
             drinks.map((drink,index) => <Drinkbox key={index}
                                                   drink={drink}
-                                                  openOrderModal={this.openOrderModal} />)
+                                                  shopId={this.props.params.id}
+                                                  openOrderModal={this.openOrderModal}/>)
           }
 
           {this.state.orderModalOpen && <OrderModal closeModal={this.closeOrderModal}
                                                     placeOrder={this.placeOrder}
-                                                    moreDetailsOrder={this.detailsOrder}/>}
+                                                    moreDetailsOrder={this.detailsOrder}
+                                                    drink={this.state.drink}
+                                                    status={this.state.status}/>}
           {this.state.otpModalOpen && <OtpModal closeModal={this.closeOtpModal}
                                                 confirmOtp={this.confirmOtp}/>}
           {this.state.confirmOrderModalOpen && <ConfirmOrderModal closeModal={this.closeConfirmOrderModal}
-                                                                  confirmOrder={this.confirmOrder}/>}
+                                                                  confirmOrder={this.confirmOrder}
+                                                                  order={this.props.order[0]}/>}
         </div>
     );
   }

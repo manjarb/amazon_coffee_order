@@ -9,6 +9,11 @@ class CustomizeOrder extends Component {
     this.props.updateHeaderName("CUSTOMIZE");
   }
 
+  componentWillMount(){
+    this.drinks = (this.props.shops.filter(x => x.id === parseInt(this.props.params.shop_id, 10)).map(x=> x.drinks))[0];
+    this.drink = (this.drinks.filter(x => x.id === parseInt(this.props.params.order_id, 10)))[0];
+  }
+
   render() {
     return (
       <div className="product-details-box">
@@ -16,13 +21,13 @@ class CustomizeOrder extends Component {
           <article className="media">
             <div className="media-left">
               <figure className="image is-64x64">
-                <img src={CoffeeImage} alt="Espresso"/>
+                <img src={this.drink.coffee_image} alt={this.drink.name}/>
               </figure>
             </div>
             <div className="media-content">
               <div className="content">
                 <h3>
-                  <strong>Espresso</strong>
+                  <strong>{this.drink.name}</strong>
                 </h3>
                 <p>
                   4 Cups

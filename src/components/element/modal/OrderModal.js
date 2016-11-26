@@ -1,7 +1,23 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 
 class OrderModal extends Component {
+
+  constructor(){
+    super();
+    this.state = {
+      amount: 1
+    }
+  }
+
+  addAmount(amount){
+    this.setState({amount: amount + 1})
+  }
+
+  deleteAmount(amount){
+    if(amount >= 2){
+      this.setState({amount: amount - 1})
+    }
+  }
 
   render() {
     return (
@@ -20,18 +36,24 @@ class OrderModal extends Component {
             <div className="card-content">
               <div className="content text-center">
                 <h2>
-                  <strong>Cold Expresso</strong>
+                  <strong>{this.props.drink.name} {this.props.status}</strong>
                 </h2>
                 <div className="modal-order-amount-box">
                   <div className="columns is-mobile">
                     <div className="column">
-                      <button type="button" className="button is-danger">
+                      <button type="button"
+                              className="button is-danger"
+                              onClick={() => this.deleteAmount(this.state.amount)}>
                         -
                       </button>
                     </div>
-                    <div className="column">1</div>
                     <div className="column">
-                      <button type="button" className="button is-success">
+                      {this.state.amount}
+                    </div>
+                    <div className="column">
+                      <button type="button"
+                              className="button is-success"
+                              onClick={() => this.addAmount(this.state.amount)}>
                         +
                       </button>
                     </div>
@@ -61,8 +83,8 @@ class OrderModal extends Component {
             </div>
             <div className="card-footer">
               <a className="card-footer-item button is-info" onClick={this.props.moreDetailsOrder}>More Details</a>
-              <a className="card-footer-item button is-success" onClick={this.props.placeOrder}>Buy Now</a>
-
+              <a className="card-footer-item button is-success"
+                 onClick={() => this.props.placeOrder(this.props.drink,this.state.amount,this.props.status)}>Buy Now</a>
             </div>
           </div>
         </div>

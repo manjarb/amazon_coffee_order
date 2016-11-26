@@ -1,7 +1,18 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 
 class OtpModal extends Component {
+
+  constructor(){
+    super();
+    this.randomOtp = this.randomOtp.bind(this);
+    this.state = {
+      otpCode: ""
+    }
+  }
+
+  randomOtp(){
+    this.setState({otpCode: Math.floor(Math.random() * 9999) + 1000})
+  }
 
   render() {
     return (
@@ -29,7 +40,7 @@ class OtpModal extends Component {
                     <input className="input" type="text" placeholder="082-123-4567"/>
                     <br/>
                     <br/>
-                    <button type="button" className="button is-success">
+                    <button type="button" className="button is-success" onClick={this.randomOtp}>
                       Request OTP
                     </button>
                   </p>
@@ -38,7 +49,7 @@ class OtpModal extends Component {
                 <div className="otp-input-box">
                   <label className="label">Confirmation Code</label>
                   <p className="control">
-                    <input className="input" type="text" placeholder="XXXX"/>
+                    <input className="input" type="text" value={this.state.otpCode} placeholder="XXXX"/>
                   </p>
                 </div>
               </div>
