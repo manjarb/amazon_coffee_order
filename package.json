@@ -2,6 +2,7 @@
   "name": "amazon-order",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://manjarb.github.io/amazon_coffee_order/",
   "devDependencies": {
     "autoprefixer-stylus": "0.10.0",
     "concurrently": "3.0.0",

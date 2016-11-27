@@ -14,8 +14,10 @@ import 'font-awesome/css/font-awesome.min.css';
 import 'bulma/css/bulma.css';
 import './css/style.css';
 
+//const repo = `/`
+
 const router = (
-    <Router history={ browserHistory }>
+    <Router history={ browserHistory } basename="/amazon_coffee_build/">
       <Route path="/" component={App}>
         <IndexRoute component={Homepage}/>
         <Route path="/shops/:id" component={ProductList}/>
