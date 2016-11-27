@@ -17,8 +17,8 @@ import './css/style.css';
 //const repo = `/`
 
 const router = (
-    <Router history={ browserHistory } basename="/amazon_coffee_build/">
-      <Route path="/" component={App}>
+    <Router history={ browserHistory } >
+      <Route path="/amazon_coffee_build" component={App}>
         <IndexRoute component={Homepage}/>
         <Route path="/shops/:id" component={ProductList}/>
         <Route path="/shops/:shop_id/product/:order_id" component={OrderDetails}/>

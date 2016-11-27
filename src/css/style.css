@@ -132,6 +132,9 @@ footer {
 .button-submit-your-orders-box button {
   width: 100%;
 }
+.drink-element-box {
+  min-height: 145px;
+}
 .drink-element-box .content h3 {
   margin-bottom: 15px;
 }

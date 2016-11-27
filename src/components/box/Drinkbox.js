@@ -31,21 +31,21 @@ class Drinkbox extends Component {
               <div className="drink-order-menu-label">
                 <div className="columns is-mobile text-center">
                   <div className="column">
-                    <button href="#" onClick={() => this.openModal(this.props.drink,"cold")}>
-                      <h4 className="blue-text">Cold</h4>
-                      <p className="button is-info">{this.props.drink.cold.price}</p>
+                    <h4 className="blue-text">Cold</h4>
+                    <button className="button is-info" href="#" onClick={() => this.openModal(this.props.drink,"cold")}>
+                      <p>{this.props.drink.cold.price}</p>
                     </button>
                   </div>
                   <div className="column">
-                    <button href="#" onClick={() => this.openModal(this.props.drink,"hot")}>
-                      <h4 className="red-text">Hot</h4>
-                      <p className="button is-danger">{this.props.drink.hot.price}</p>
+                    <h4 className="red-text">Hot</h4>
+                    <button className="button is-danger" onClick={() => this.openModal(this.props.drink,"hot")}>
+                      <p>{this.props.drink.hot.price}</p>
                     </button>
                   </div>
                   <div className="column">
-                    <button href="#" onClick={() => this.openModal(this.props.drink,"frappe")}>
-                      <h4 className="green-text">Frappe</h4>
-                      <p className="button is-success">{this.props.drink.frappe.price}</p>
+                    <h4 className="green-text">Frappe</h4>
+                    <button className="button is-success" onClick={() => this.openModal(this.props.drink,"frappe")}>
+                      <p>{this.props.drink.frappe.price}</p>
                     </button>
                   </div>
                   <div className="column">
